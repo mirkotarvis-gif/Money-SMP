@@ -1,0 +1,108 @@
+name: MoneySMP
+version: 1.1.0
+main: net.moneysmp.MoneySMP
+api-version: '1.21'
+author: mirko
+description: Core plugin for Money SMP - economy, teams, tiers, bidding, events, minigames and builds.
+
+commands:
+  # ---- money and teams
+  balance:
+    description: Show your (or another player's) balance.
+    usage: /balance [player]
+    aliases: [bal]
+  pay:
+    description: Send money to another player.
+    usage: /pay <player> <amount>
+  baltop:
+    description: Richest players.
+    usage: /baltop
+  money:
+    description: View or change money.
+    usage: /money view <player|team> | /money <set|add|remove> <player> <amount>
+  eco:
+    description: Admin economy controls.
+    usage: /eco <give|take|set> <player> <amount> | /eco giveteam <team> <amount>
+    permission: moneysmp.admin
+  assassin:
+    description: Mark a player as assassin for Disasters.
+    usage: /assassin <set|remove> [player] | /assassin list
+    permission: moneysmp.admin
+  teamleader:
+    description: Make a player a team leader.
+    usage: /teamleader set <player> <team>
+    permission: moneysmp.admin
+  teamreset:
+    description: Remove every player from every team.
+    usage: /teamreset
+    permission: moneysmp.admin
+  team:
+    description: Team management.
+    usage: /team <list|info|create|delete|add|remove|leader|icon|color>
+  tier:
+    description: Player tiers.
+    usage: /tier <get|set|clear|list>
+
+  # ---- ranks and chat
+  admin:
+    description: Give or remove the admin icon.
+    usage: /admin <set|remove> <player>
+    permission: moneysmp.admin
+  staff:
+    description: Give or remove the staff icon.
+    usage: /staff <set|remove> <player>
+    permission: moneysmp.admin
+  broadcast:
+    description: Send a message to everyone.
+    usage: /broadcast <message>
+    aliases: [bc]
+    permission: moneysmp.admin
+
+  # ---- start setup
+  moneystart:
+    description: Start Money SMP (grace period).
+    usage: /moneystart [seconds]
+    permission: moneysmp.admin
+  bidding:
+    description: Start or cancel a bidding session.
+    usage: /bidding <time|stop>
+    permission: moneysmp.admin
+  bidopen:
+    description: Open bidding on one tier.
+    usage: /bidopen <tier>
+    permission: moneysmp.admin
+  bidclose:
+    description: Close bidding.
+    usage: /bidclose
+    permission: moneysmp.admin
+  bid:
+    description: Bid on the player up for auction.
+    usage: /bid <amount> | /bid status
+  grace:
+    description: Start or stop the PvP grace period.
+    usage: /grace <start [seconds]|stop|status>
+    permission: moneysmp.admin
+
+  # ---- events
+  event:
+    description: Timed server events.
+    usage: /event <start|stop|list|random> [event] [seconds]
+    aliases: [smpevent]
+  eventmain:
+    description: Host the big events, kits, capture points and builds.
+    usage: /eventmain <event> <setmap|start|stop>
+    aliases: [em]
+    permission: moneysmp.admin
+  game:
+    description: Minigames (low-level control).
+    usage: /game <id> <start|stop|end|score|status>
+  moneysmp:
+    description: Plugin admin.
+    usage: /moneysmp <reload|save>
+    aliases: [msmp]
+    permission: moneysmp.admin
+
+permissions:
+  moneysmp.admin:
+    description: All admin commands.
+    default: op

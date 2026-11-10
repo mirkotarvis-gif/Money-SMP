@@ -1,0 +1,393 @@
+
+#  ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ██╗
+# ██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗██║
+# ██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║██║
+# ██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██║
+# ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║███████╗
+#  ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
+
+messages:
+  prefix: "<dark_gray>[</dark_gray><yellow>Money SMP</yellow><dark_gray>] </dark_gray>"
+general:
+  broadcast-sound: BLOCK_NOTE_BLOCK_PLING
+  tab:
+    enabled: true
+    money-gap: 2
+    width: 130
+    team-icon-width: 11
+    leader-icon-width: 10
+    rank-icon-width: 38
+    money-color: 6736191
+    # Glyphs shown in tab. A private-use glyph (resource pack) uses the *-icon-width values above.
+    leader-icon: "\uE000"
+  grace:
+    duration-seconds: 1800
+    sound: ENTITY_ENDER_DRAGON_GROWL
+
+
+# ███████╗ ██████╗ ██████╗ ███╗   ██╗ ██████╗ ███╗   ███╗██╗   ██╗
+# ██╔════╝██╔════╝██╔═══██╗████╗  ██║██╔═══██╗████╗ ████║╚██╗ ██╔╝
+# █████╗  ██║     ██║   ██║██╔██╗ ██║██║   ██║██╔████╔██║ ╚████╔╝
+# ██╔══╝  ██║     ██║   ██║██║╚██╗██║██║   ██║██║╚██╔╝██║  ╚██╔╝
+# ███████╗╚██████╗╚██████╔╝██║ ╚████║╚██████╔╝██║ ╚═╝ ██║   ██║
+# ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝   ╚═╝
+
+economy:
+  starting-balance: 100
+  min-balance: 0
+
+
+# ████████╗███████╗ █████╗ ███╗   ███╗███████╗
+# ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██╔════╝
+#    ██║   █████╗  ███████║██╔████╔██║███████╗
+#    ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║╚════██║
+#    ██║   ███████╗██║  ██║██║ ╚═╝ ██║███████║
+#    ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
+
+teams:
+  leaders-per-team: 1
+
+# Icons shown before names in tab and chat (MiniMessage).
+roles:
+  # Glyphs from MoneySMP-ResourcePack. Without the pack, use e.g. "<red><bold>ADMIN</bold></red>".
+  admin-icon: "<white>\uE020</white>"
+  staff-icon: "<white>\uE021</white>"
+
+
+# ██████╗ ██╗██████╗ ██████╗ ██╗███╗   ██╗ ██████╗
+# ██╔══██╗██║██╔══██╗██╔══██╗██║████╗  ██║██╔════╝
+# ██████╔╝██║██║  ██║██║  ██║██║██╔██╗ ██║██║  ███╗
+# ██╔══██╗██║██║  ██║██║  ██║██║██║╚██╗██║██║   ██║
+# ██████╔╝██║██████╔╝██████╔╝██║██║ ╚████║╚██████╔╝
+# ╚═════╝ ╚═╝╚═════╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
+
+bidding:
+  start-budget: 500
+  max-per-tier: 1
+  open-seconds: 30
+  ranges:
+    S:
+      min: 150
+      max: 300
+    A:
+      min: 100
+      max: 250
+    B:
+      min: 75
+      max: 250
+    C:
+      min: 50
+      max: 200
+    D:
+      min: 30
+      max: 150
+    F:
+      min: 20
+      max: 100
+  colors:
+    alert: "#f5db7b"
+    headline: "#8bebf0"
+    label: "#fbe69b"
+    tier-name: "#7594cc"
+    money: "#e3948f"
+  title-colors:
+    S: "#FFD54A"
+    A: "#77E24A"
+    B: "#4588e3"
+    C: "#E2D24A"
+    D: "#E29A4A"
+    F: "#E24A4A"
+
+
+# ████████╗██╗███████╗██████╗ ███████╗
+# ╚══██╔══╝██║██╔════╝██╔══██╗██╔════╝
+#    ██║   ██║█████╗  ██████╔╝███████╗
+#    ██║   ██║██╔══╝  ██╔══██╗╚════██║
+#    ██║   ██║███████╗██║  ██║███████║
+#    ╚═╝   ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
+
+tiers:
+  rewards:
+    S: 50
+    A: 40
+    B: 30
+    C: 20
+    D: 10
+    F: 0
+  # Money paid to the killer is the victim's tier reward above.
+  # Glyphs from MoneySMP-ResourcePack. Without the pack, use plain text like "S".
+  icons:
+    S: "\uE001"
+    A: "\uE002"
+    B: "\uE003"
+    C: "\uE004"
+    D: "\uE005"
+    F: "\uE006"
+
+
+# ███████╗██╗   ██╗███████╗███╗   ██╗████████╗███████╗
+# ██╔════╝██║   ██║██╔════╝████╗  ██║╚══██╔══╝██╔════╝
+# █████╗  ██║   ██║█████╗  ██╔██╗ ██║   ██║   ███████╗
+# ██╔══╝  ╚██╗ ██╔╝██╔══╝  ██║╚██╗██║   ██║   ╚════██║
+# ███████╗ ╚████╔╝ ███████╗██║ ╚████║   ██║   ███████║
+# ╚══════╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+
+events:
+  shieldless:
+    duration-seconds: 7200
+  exhausted:
+    duration-seconds: 3600
+    slowness-level: 1
+    mining-fatigue-level: 1
+  forbiddenfruit:
+    duration-seconds: 2700
+    golden-apple-chance: 0.015
+  oppositeday:
+    duration-seconds: 3600
+  minershaven:
+    duration-seconds: 3600
+  flimsyarmor:
+    duration-seconds: 3600
+    max-protection: 3
+    max-unbreaking: 1
+  doubledough:
+    duration-seconds: 3600
+  vulnerable:
+    duration-seconds: 3600
+    hearts: 7.5
+  quickmath:
+    duration-seconds: 3600
+    reward: 25
+    interval-seconds: 300
+  anonymous:
+    duration-seconds: 3600
+  ultrahardcore:
+    duration-seconds: 3600
+  glowandbehold:
+    duration-seconds: 3600
+  breaktime:
+    duration-seconds: 3600
+  sound-good: ENTITY_PLAYER_LEVELUP
+  sound-bad: BLOCK_BEACON_ACTIVATE
+
+
+#  ██████╗ █████╗ ██████╗ ████████╗██╗   ██╗██████╗ ███████╗
+# ██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██║   ██║██╔══██╗██╔════╝
+# ██║     ███████║██████╔╝   ██║   ██║   ██║██████╔╝█████╗
+# ██║     ██╔══██║██╔═══╝    ██║   ██║   ██║██╔══██╗██╔══╝
+# ╚██████╗██║  ██║██║        ██║   ╚██████╔╝██║  ██║███████╗
+#  ╚═════╝╚═╝  ╚═╝╚═╝        ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
+
+capturepoints:
+  zone-size: 15
+  reward: 50
+  control-seconds: 180
+  capture-seconds: 180
+  hologram-height: 5
+  floor-per-tick: 40
+
+
+# ████████╗██╗████████╗ █████╗ ███╗   ██╗███████╗
+# ╚══██╔══╝██║╚══██╔══╝██╔══██╗████╗  ██║██╔════╝
+#    ██║   ██║   ██║   ███████║██╔██╗ ██║███████╗
+#    ██║   ██║   ██║   ██╔══██║██║╚██╗██║╚════██║
+#    ██║   ██║   ██║   ██║  ██║██║ ╚████║███████║
+#    ╚═╝   ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝
+
+titans:
+  countdown-seconds: 30
+  duration-seconds: 1800
+  rewards: [250, 200, 150, 100, 75]
+  sword-damage: 3.0
+  titan:
+    scale: 5.0
+    hearts: 70
+    strength-level: 3
+    reach: 10
+    step-height: 2.0
+  pickaxe:
+    cooldown-ticks: 20
+    reach-blocks: 8
+    display-scale: 10.0
+  leap:
+    cooldown-ticks: 200
+    power: 1.7
+  sonic:
+    cooldown-ticks: 600
+    charge-ticks: 20
+    range: 30
+    damage: 12.0
+  echo:
+    cooldown-ticks: 900
+    radius: 48
+    duration-ticks: 200
+
+
+# ███████╗ ██████╗  ██████╗ ██╗  ██╗██╗   ██╗███╗   ██╗████████╗
+# ██╔════╝██╔════╝ ██╔════╝ ██║  ██║██║   ██║████╗  ██║╚══██╔══╝
+# █████╗  ██║  ███╗██║  ███╗███████║██║   ██║██╔██╗ ██║   ██║
+# ██╔══╝  ██║   ██║██║   ██║██╔══██║██║   ██║██║╚██╗██║   ██║
+# ███████╗╚██████╔╝╚██████╔╝██║  ██║╚██████╔╝██║ ╚████║   ██║
+# ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝
+
+egghunt:
+  world: ""
+  center-x: 0
+  center-z: 0
+  radius: 400
+  min-distance: 60
+  place-attempts: 80
+  duration-seconds: 3600
+  egg-count: 30
+  respawn-seconds: 20
+  sink-ticks: 24
+  scale: 1.0
+  box-pad: 2
+  star-width: 8
+  rewards: [250, 200, 150, 100, 75]
+  types:
+    COMMON:
+      display: Common
+      color: "#FFFFFF"
+      weight: 45
+      points: 1
+      items: [BREAD]
+    UNCOMMON:
+      display: Uncommon
+      color: "#E3948F"
+      weight: 27
+      points: 1
+      items: [IRON_INGOT]
+    RARE:
+      display: Rare
+      color: "#38E3FF"
+      weight: 16
+      points: 1
+      items: [GOLD_INGOT]
+    EPIC:
+      display: Epic
+      color: "#9A4DBD"
+      weight: 9
+      points: 1
+      items: [DIAMOND, GOLDEN_APPLE]
+    LEGENDARY:
+      display: Legendary
+      color: "#FFD54A"
+      weight: 3
+      points: 1
+      items: [DIAMOND, DIAMOND, GOLDEN_APPLE]
+
+
+#  █████╗  ██████╗███████╗██╗  ██╗██╗   ██╗███╗   ██╗████████╗
+# ██╔══██╗██╔════╝██╔════╝██║  ██║██║   ██║████╗  ██║╚══██╔══╝
+# ███████║██║     █████╗  ███████║██║   ██║██╔██╗ ██║   ██║
+# ██╔══██║██║     ██╔══╝  ██╔══██║██║   ██║██║╚██╗██║   ██║
+# ██║  ██║╚██████╗███████╗██║  ██║╚██████╔╝██║ ╚████║   ██║
+# ╚═╝  ╚═╝ ╚═════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝
+
+acehunt:
+  template-world: ""
+  world-prefix: acehunt_
+  setup-seconds: 21600
+  duration-seconds: 21600
+  grace-seconds: 60
+  border-start: 1000
+  border-shrink-seconds: 120
+  border-shrink-amount: 50
+  border-min: 100
+  dig-limit: 20
+  sky-limit: 20
+  rewards: [300, 225, 150, 100, 75, 50]
+
+
+# ██████╗ ██╗███████╗ █████╗ ███████╗████████╗███████╗██████╗ ███████╗
+# ██╔══██╗██║██╔════╝██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗██╔════╝
+# ██║  ██║██║███████╗███████║███████╗   ██║   █████╗  ██████╔╝███████╗
+# ██║  ██║██║╚════██║██╔══██║╚════██║   ██║   ██╔══╝  ██╔══██╗╚════██║
+# ██████╔╝██║███████║██║  ██║███████║   ██║   ███████╗██║  ██║███████║
+# ╚═════╝ ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚══════╝
+
+disasters:
+  countdown-seconds: 30
+  border-start: 500
+  shrink-interval-seconds: 300
+  shrink-big: 50
+  shrink-small: 10
+  shrink-threshold: 50
+  rewards: [250, 200, 150, 100, 75]
+  meteors:
+    damage: 10.0
+    radius: 7
+  thunder:
+    range: 14
+  tornado:
+    life: 700
+    spawn-range: 30
+    model: tornado
+    size: 28
+    sink: 14.0
+    speed: 0.13
+    break-radius: 13.0
+    break-depth: 0
+    bob: 1.5
+    bob-period: 90
+    break-per-tick: 10
+    spin-speed: 0.12
+    bend: 0.22
+    bend-period: 260
+    bend-turn: 0.011
+    launch: 3.4
+    catch-radius: 5.0
+    catch-reach: 10.0
+    catch-above: 20.0
+    catch-below: 10.0
+  lava:
+    height: 5
+  dust:
+    life: 500
+    damage: 1.0
+    spawn-range: 35
+  water:
+    height: 12
+  orbital:
+    radius: 5
+    build-ticks: 100
+    dig-depth: 20
+  greed:
+    damage: 6.0
+    range: 18
+
+
+#  ██████╗ ██╗      █████╗ ██████╗ ██╗ █████╗ ████████╗ ██████╗ ██████╗ ███████╗
+# ██╔════╝ ██║     ██╔══██╗██╔══██╗██║██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝
+# ██║  ███╗██║     ███████║██║  ██║██║███████║   ██║   ██║   ██║██████╔╝███████╗
+# ██║   ██║██║     ██╔══██║██║  ██║██║██╔══██║   ██║   ██║   ██║██╔══██╗╚════██║
+# ╚██████╔╝███████╗██║  ██║██████╔╝██║██║  ██║   ██║   ╚██████╔╝██║  ██║███████║
+#  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
+
+gladiators:
+  arena-gap: 100
+  pair-spacing: 260
+  prepare-seconds: 30
+  roulette-ticks: 70
+  reward: 100
+  points-per-win: 2
+  rewards: [250, 200, 150, 100, 75, 50]
+  award-gap-ticks: 80
+  stages:
+    - name: "Full Team Fight"
+      players: 6
+      rounds: 1
+      tiers: []
+    - name: "Tier Fight: D Tier + F Tier"
+      players: 2
+      rounds: 4
+      tiers: [D, F]
+    - name: "Tier Fight: S Tier + A Tier"
+      players: 2
+      rounds: 4
+      tiers: [S, A]
+    - name: "Tier Fight: B Tier + C Tier"
+      players: 2
+      rounds: 4
+      tiers: [B, C]
